@@ -173,13 +173,11 @@ async function marcarLivro(id){
 /* ================================
 BOTÃO CONFIRMAR
 ================================ */
-
 botao.addEventListener("click", async ()=>{
 
   botao.disabled = true;
 
   const textoOriginal = botao.innerText;
-
   botao.innerText = "⏳ Processando...";
 
   const nome =
@@ -200,7 +198,11 @@ botao.addEventListener("click", async ()=>{
 
       const sucesso = await marcarLivro(id);
 
-      if(!sucesso) return;
+      if(!sucesso){
+        botao.disabled=false;
+        botao.innerText = textoOriginal;
+        return;
+      }
 
       const nomeLivro =
       card.querySelector("h2").innerText;
@@ -246,20 +248,26 @@ ${mensagemPessoa || "💜"}
 Vou fazer o PIX agora 😊
 `;
 
-  const url =
-  "https://wa.me/5579998862522?text="+encodeURIComponent(mensagem);
+  const mensagemCodificada = encodeURIComponent(mensagem);
 
-  window.open(url,"_blank");
-if(!janela){
+  const telefone = "5579998862522";
 
-  const fallback = document.getElementById("fallbackWhatsapp");
-  const link = document.getElementById("linkWhatsapp");
+  /* link direto para abrir o app */
+  const whatsappApp =
+  `whatsapp://send?phone=${telefone}&text=${mensagemCodificada}`;
 
-  link.href = url;
+  /* fallback web */
+  const whatsappWeb =
+  `https://wa.me/${telefone}?text=${mensagemCodificada}`;
 
-  fallback.style.display = "block";
+  /* tenta abrir o app */
+  window.location.href = whatsappApp;
 
-}
+  /* se o app não abrir, abre web depois */
+  setTimeout(()=>{
+    window.location.href = whatsappWeb;
+  },1500);
+
   setTimeout(()=>{
 
     botao.disabled=false;
@@ -268,7 +276,6 @@ if(!janela){
   },2000);
 
 });
-
 
 
 
