@@ -1,334 +1,286 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Lista de Presentes</title>
-  </head>
 
-  <body>
-    <div class="barra-compra">
-      <div class="info">
-        <span id="quantidade">0 livros</span>
-        <span id="total">R$ 0,00</span>
-      </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Lista de Presentes</title>
+</head>
 
-      <button id="confirmar">Confirmar Presente e Pagar PIX</button>
+<body>
+  <div class="barra-compra">
+    <div class="info">
+      <span id="quantidade">0 livros</span>
+      <span id="total">R$ 0,00</span>
     </div>
 
-    <div class="intro">
-      <h1>📚 Lista de Livros pra Tayná 💜</h1>
-      <p id="contadorLivros">📚 0 / 31 livros já escolhidos</p>
+    <button id="confirmar">Confirmar Presente e Pagar PIX</button>
+  </div>
 
-      <div class="barra-progresso">
-        <div id="progresso"></div>
-      </div>
+  <div class="intro">
+
+ 
+    <h1>📚 Presenteie Tayná</h1>
+    <h1>Escolha até o dia 01 de abril</h1>
+    <div class="passos">
+
+      <div>1️⃣ Escolha um livro</div>
+      <div>2️⃣ Toque em confirmar</div>
+      <div>3️⃣ Envie o PIX no WhatsApp</div>
+      
+    </div>
+    <p id="contadorLivros">📚 0 / 31 livros já escolhidos</p>
+
+    <div class="barra-progresso">
+      <div id="progresso"></div>
+    </div>
+
+    <input id="nomePessoa" placeholder="Seu nome" />
+
+    <textarea id="mensagemPessoa" placeholder="Mensagem para Tayná (opcional)"></textarea>
+  </div>
+
+  <div class="catalogo">
+    <div class="livro" data-id="1">
+      <label>
+        <input type="checkbox" name="livros" value="É Assim que Acaba" />
+        <img src="img/ItEndsWithUs.webp" alt="É Assim que Acaba" />
+        <h2>É Assim que Acaba</h2>
+        <p class="price">R$ 27,60</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="2">
+      <label>
+        <input type="checkbox" name="livros" value="Infelizmente sua" />
+        <img src="img/Infelizmente sua.webp" alt="Infelizmente sua" />
+        <h2>Infelizmente sua</h2>
+        <p class="price">R$ 29,10</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="3">
+      <label>
+        <input type="checkbox" name="livros" value="Apostando no amor" />
+        <img src="img/Apostando no amor.webp" alt="Apostando no amor" />
+        <h2>Apostando no amor</h2>
+        <p class="price">R$ 32,61</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="4">
+      <label>
+        <input type="checkbox" name="livros" value="Não é como nos filmes" />
+        <img src="img/Não é como nos filmes.webp" alt="Não é como nos filmes" />
+        <h2>Não é como nos filmes (Melhor do que nos filmes – vol. 2)</h2>
+        <p class="price">R$ 32,68</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="5">
+      <label>
+        <input type="checkbox" name="livros" value="Sorte no amor" />
+        <img src="img/Sorte no amor.jpg" alt="Sorte no amor" />
+        <h2>Sorte no amor: Quem se apaixonar primeiro ganha</h2>
+        <p class="price">R$ 32,76</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="6">
+      <label>
+        <input type="checkbox" name="livros" value="Se você ficasse" />
+        <img src="img/Se você ficasse.jpg" alt="Se você ficasse" />
+        <h2>Se você ficasse</h2>
+        <p class="price">R$ 34,95</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="7">
+      <label>
+        <input type="checkbox" name="livros" value="O que fazemos nas sombras" />
+        <img src="img/O que fazemos nas sombras.webp" alt="O que fazemos nas sombras" />
+        <h2>O que fazemos nas sombras</h2>
+        <p class="price">R$ 41,24</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="8">
+      <label>
+        <input type="checkbox" name="livros" value="Pequenos segredos" />
+        <img src="img/Pequenos segredos.jpeg" alt="Pequenos segredos" />
+        <h2>Pequenos segredos</h2>
+        <p class="price">R$ 41,24</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="9">
+      <label>
+        <input type="checkbox" name="livros" value="Depois daquele inverno" />
+        <img src="img/Depois daquele inverno.jpg" alt="Depois daquele inverno" />
+        <h2>Depois daquele inverno</h2>
+        <p class="price">R$ 41,24</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="10">
+      <label>
+        <input type="checkbox" name="livros" value="Amor corrompido" />
+        <img src="img/Amor corrompido.jpg" alt="Amor corrompido" />
+        <h2>Amor corrompido (Twisted Love)</h2>
+        <p class="price">R$ 42,69</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="11">
+      <label>
+        <input type="checkbox" name="livros" value="O filho perfeito" />
+        <img src="img/O filho perfeito.jpg" alt="O filho perfeito" />
+        <h2>O filho perfeito</h2>
+        <p class="price">R$ 44,90</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="12">
+      <label>
+        <input type="checkbox" name="livros" value="Amor e ódio" />
+        <img src="img/Amor e ódio.jpg" alt="Amor e ódio" />
+        <h2>Amor e ódio (Twisted Hate)</h2>
+        <p class="price">R$ 44,95</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="13">
+      <label>
+        <input type="checkbox" name="livros" value="Mentiras do amor" />
+        <img src="img/Mentiras do amor.jpg" alt="Mentiras do amor" />
+        <h2>Mentiras do amor (Twisted Lies)</h2>
+        <p class="price">R$ 45,10</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="14">
+      <label>
+        <input type="checkbox" name="livros" value="Teia de Mentiras" />
+        <img src="img/Teia de Mentiras.jpg" alt="Teia de Mentiras" />
+        <h2>Teia de Mentiras</h2>
+        <p class="price">R$ 45,90</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="15">
+      <label>
+        <input type="checkbox" name="livros" value="Com amor, mamãe" />
+        <img src="img/Com amor, mamãe.jpeg" alt="Com amor, mamãe" />
+        <h2>Com amor, mamãe</h2>
+        <p class="price">R$ 46,45</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="16">
+      <label>
+        <input type="checkbox" name="livros" value="A dona de casa perfeita" />
+        <img src="img/A dona de casa perfeita.jpeg" alt="A dona de casa perfeita" />
+        <h2>A dona de casa perfeita</h2>
+        <p class="price">R$ 46,70</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="17">
+      <label>
+        <input type="checkbox" name="livros" value="Flores partidas" />
+        <img src="img/Flores partidas.jpeg" alt="Flores partidas" />
+        <h2>Flores partidas</h2>
+        <p class="price">R$ 48,90</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="18">
+      <label>
+        <input type="checkbox" name="livros" value="Casamento Perfeito" />
+        <img src="img/Casamento Perfeito.jpg" alt="Casamento Perfeito" />
+        <h2>Casamento Perfeito</h2>
+        <p class="price">R$ 49,39</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="19">
+      <label>
+        <input type="checkbox" name="livros" value="Jogos do amor" />
+        <img src="img/Jogos do amor.jpg" alt="Jogos do amor" />
+        <h2>Jogos do amor (Twisted Games)</h2>
+        <p class="price">R$ 49,78</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="20">
+      <label>
+        <input type="checkbox" name="livros" value="Amor na prática" />
+        <img src="img/Amor na prática.jpg" alt="Amor na prática" />
+        <h2>Amor na prática</h2>
+        <p class="price">R$ 62,90</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="21">
+      <label>
+        <input type="checkbox" name="livros" value="Como Matei Minha Querida Família" />
+        <img src="img/Como Matei Minha Querida Família.png" alt="Como Matei Minha Querida Família" />
+        <h2>Como Matei Minha Querida Família</h2>
+        <p class="price">R$ 65,38</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="22">
+      <label>
+        <input type="checkbox" name="livros" value="Kit Estilhaça-me" />
+        <img src="img/Kit Estilhaça-me.jpg" alt="Kit Estilhaça-me" />
+        <h2>Kit Estilhaça-me: A série completa</h2>
+        <p class="price">R$ 129,74</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="23">
+      <label>
+        <input type="checkbox" name="livros" value="Se Não Fosse por Você" />
+        <img src="img/Se Não Fosse por Você.jpeg" alt="Se Não Fosse por Você" />
+        <h2>Se Não Fosse por Você</h2>
+        <p class="price">R$ 43,92</p>
+      </label>
+    </div>
+
+    <div class="livro" data-id="24">
+      <label>
+        <input type="checkbox" name="livros" value="Kit Eleanor & Grey + Landon & Shay" />
+        <img src="img/Kit Eleanor&Grey + Landon&Shay.webp" alt="Kit Eleanor & Grey + Landon & Shay" />
+        <h2>Kit Eleanor & Grey + Landon & Shay (Vol. 1 e 2)</h2>
+        <p class="price">R$ 99,90</p>
+      </label>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <div id="fallbackWhatsapp" style="display: none; text-align: center; margin: 20px">
+    <p>⚠️ Seu navegador bloqueou a abertura automática.</p>
+    <a id="linkWhatsapp" target="_blank" style="color: white; font-weight: bold">
+      👉 Clique aqui para abrir o WhatsApp
+    </a>
+  </div>
+  <div id="confirmacaoReserva"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center; text-align:center; padding:20px;">
+
+    <div style="background:white; color:#333; padding:30px; border-radius:16px; max-width:400px;">
+
+      <h2 style="color:#6a1b9a;">✅ Livros reservados!</h2>
+
+      <p style="margin-top:10px;">
+        Seus livros foram registrados na lista.
+      </p>
 
       <p>
-        Ela quer muito ganhar 31 livros no aniversário de 31, e pra isso vamos
-        precisar unir forças (e carteiras). A ideia é que você escolha o livro
-        que quer pagar e selecionar-lo na lista abaixo, confirmar, escrever uma
-        mensagem pra ela e enviar um pix com o valor para Tayssa(que vai comprar
-        todos os livros juntos)
-      </p>
-      <br />
-      <p>
-        Escolha um ou mais livros para presentear. Ao confirmar, você será
-        levado para o WhatsApp da Tayssa.
+        Agora envie o PIX e sua mensagem pelo WhatsApp.
       </p>
 
-      <input id="nomePessoa" placeholder="Seu nome" />
-
-      <textarea
-        id="mensagemPessoa"
-        placeholder="Mensagem para Tayná (opcional)"
-      ></textarea>
-    </div>
-
-    <div class="catalogo">
-      <div class="livro" data-id="1">
-        <label>
-          <input type="checkbox" name="livros" value="É Assim que Acaba" />
-          <img src="img/ItEndsWithUs.webp" alt="É Assim que Acaba" />
-          <h2>É Assim que Acaba</h2>
-          <p class="price">R$ 27,60</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="2">
-        <label>
-          <input type="checkbox" name="livros" value="Infelizmente sua" />
-          <img src="img/Infelizmente sua.webp" alt="Infelizmente sua" />
-          <h2>Infelizmente sua</h2>
-          <p class="price">R$ 29,10</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="3">
-        <label>
-          <input type="checkbox" name="livros" value="Apostando no amor" />
-          <img src="img/Apostando no amor.webp" alt="Apostando no amor" />
-          <h2>Apostando no amor</h2>
-          <p class="price">R$ 32,61</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="4">
-        <label>
-          <input type="checkbox" name="livros" value="Não é como nos filmes" />
-          <img
-            src="img/Não é como nos filmes.webp"
-            alt="Não é como nos filmes"
-          />
-          <h2>Não é como nos filmes (Melhor do que nos filmes – vol. 2)</h2>
-          <p class="price">R$ 32,68</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="5">
-        <label>
-          <input type="checkbox" name="livros" value="Sorte no amor" />
-          <img src="img/Sorte no amor.jpg" alt="Sorte no amor" />
-          <h2>Sorte no amor: Quem se apaixonar primeiro ganha</h2>
-          <p class="price">R$ 32,76</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="6">
-        <label>
-          <input type="checkbox" name="livros" value="Se você ficasse" />
-          <img src="img/Se você ficasse.jpg" alt="Se você ficasse" />
-          <h2>Se você ficasse</h2>
-          <p class="price">R$ 34,95</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="7">
-        <label>
-          <input
-            type="checkbox"
-            name="livros"
-            value="O que fazemos nas sombras"
-          />
-          <img
-            src="img/O que fazemos nas sombras.webp"
-            alt="O que fazemos nas sombras"
-          />
-          <h2>O que fazemos nas sombras</h2>
-          <p class="price">R$ 41,24</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="8">
-        <label>
-          <input type="checkbox" name="livros" value="Pequenos segredos" />
-          <img src="img/Pequenos segredos.jpeg" alt="Pequenos segredos" />
-          <h2>Pequenos segredos</h2>
-          <p class="price">R$ 41,24</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="9">
-        <label>
-          <input type="checkbox" name="livros" value="Depois daquele inverno" />
-          <img
-            src="img/Depois daquele inverno.jpg"
-            alt="Depois daquele inverno"
-          />
-          <h2>Depois daquele inverno</h2>
-          <p class="price">R$ 41,24</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="10">
-        <label>
-          <input type="checkbox" name="livros" value="Amor corrompido" />
-          <img src="img/Amor corrompido.jpg" alt="Amor corrompido" />
-          <h2>Amor corrompido (Twisted Love)</h2>
-          <p class="price">R$ 42,69</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="11">
-        <label>
-          <input type="checkbox" name="livros" value="O filho perfeito" />
-          <img src="img/O filho perfeito.jpg" alt="O filho perfeito" />
-          <h2>O filho perfeito</h2>
-          <p class="price">R$ 44,90</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="12">
-        <label>
-          <input type="checkbox" name="livros" value="Amor e ódio" />
-          <img src="img/Amor e ódio.jpg" alt="Amor e ódio" />
-          <h2>Amor e ódio (Twisted Hate)</h2>
-          <p class="price">R$ 44,95</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="13">
-        <label>
-          <input type="checkbox" name="livros" value="Mentiras do amor" />
-          <img src="img/Mentiras do amor.jpg" alt="Mentiras do amor" />
-          <h2>Mentiras do amor (Twisted Lies)</h2>
-          <p class="price">R$ 45,10</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="14">
-        <label>
-          <input type="checkbox" name="livros" value="Teia de Mentiras" />
-          <img src="img/Teia de Mentiras.jpg" alt="Teia de Mentiras" />
-          <h2>Teia de Mentiras</h2>
-          <p class="price">R$ 45,90</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="15">
-        <label>
-          <input type="checkbox" name="livros" value="Com amor, mamãe" />
-          <img src="img/Com amor, mamãe.jpeg" alt="Com amor, mamãe" />
-          <h2>Com amor, mamãe</h2>
-          <p class="price">R$ 46,45</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="16">
-        <label>
-          <input
-            type="checkbox"
-            name="livros"
-            value="A dona de casa perfeita"
-          />
-          <img
-            src="img/A dona de casa perfeita.jpeg"
-            alt="A dona de casa perfeita"
-          />
-          <h2>A dona de casa perfeita</h2>
-          <p class="price">R$ 46,70</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="17">
-        <label>
-          <input type="checkbox" name="livros" value="Flores partidas" />
-          <img src="img/Flores partidas.jpeg" alt="Flores partidas" />
-          <h2>Flores partidas</h2>
-          <p class="price">R$ 48,90</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="18">
-        <label>
-          <input type="checkbox" name="livros" value="Casamento Perfeito" />
-          <img src="img/Casamento Perfeito.jpg" alt="Casamento Perfeito" />
-          <h2>Casamento Perfeito</h2>
-          <p class="price">R$ 49,39</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="19">
-        <label>
-          <input type="checkbox" name="livros" value="Jogos do amor" />
-          <img src="img/Jogos do amor.jpg" alt="Jogos do amor" />
-          <h2>Jogos do amor (Twisted Games)</h2>
-          <p class="price">R$ 49,78</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="20">
-        <label>
-          <input type="checkbox" name="livros" value="Amor na prática" />
-          <img src="img/Amor na prática.jpg" alt="Amor na prática" />
-          <h2>Amor na prática</h2>
-          <p class="price">R$ 62,90</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="21">
-        <label>
-          <input
-            type="checkbox"
-            name="livros"
-            value="Como Matei Minha Querida Família"
-          />
-          <img
-            src="img/Como Matei Minha Querida Família.png"
-            alt="Como Matei Minha Querida Família"
-          />
-          <h2>Como Matei Minha Querida Família</h2>
-          <p class="price">R$ 65,38</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="22">
-        <label>
-          <input type="checkbox" name="livros" value="Kit Estilhaça-me" />
-          <img src="img/Kit Estilhaça-me.jpg" alt="Kit Estilhaça-me" />
-          <h2>Kit Estilhaça-me: A série completa</h2>
-          <p class="price">R$ 129,74</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="23">
-        <label>
-          <input type="checkbox" name="livros" value="Se Não Fosse por Você" />
-          <img
-            src="img/Se Não Fosse por Você.jpeg"
-            alt="Se Não Fosse por Você"
-          />
-          <h2>Se Não Fosse por Você</h2>
-          <p class="price">R$ 43,92</p>
-        </label>
-      </div>
-
-      <div class="livro" data-id="24">
-        <label>
-          <input
-            type="checkbox"
-            name="livros"
-            value="Kit Eleanor & Grey + Landon & Shay"
-          />
-          <img
-            src="img/Kit Eleanor&Grey + Landon&Shay.webp"
-            alt="Kit Eleanor & Grey + Landon & Shay"
-          />
-          <h2>Kit Eleanor & Grey + Landon & Shay (Vol. 1 e 2)</h2>
-          <p class="price">R$ 99,90</p>
-        </label>
-      </div>
-    </div>
-    <script src="script.js"></script>
-    <div
-      id="fallbackWhatsapp"
-      style="display: none; text-align: center; margin: 20px"
-    >
-      <p>⚠️ Seu navegador bloqueou a abertura automática.</p>
-      <a
-        id="linkWhatsapp"
-        target="_blank"
-        style="color: white; font-weight: bold"
-      >
-        👉 Clique aqui para abrir o WhatsApp
-      </a>
-    </div>
-    <div id="confirmacaoReserva" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center; text-align:center; padding:20px;">
-
-  <div style="background:white; color:#333; padding:30px; border-radius:16px; max-width:400px;">
-
-    <h2 style="color:#6a1b9a;">✅ Livros reservados!</h2>
-
-    <p style="margin-top:10px;">
-      Seus livros foram registrados na lista.
-    </p>
-
-    <p>
-      Agora envie o PIX e sua mensagem pelo WhatsApp.
-    </p>
-
-    <button id="botaoIrWhatsapp" style="
+      <button id="botaoIrWhatsapp" style="
       margin-top:20px;
       background:#9c27b0;
       color:white;
@@ -338,11 +290,12 @@
       cursor:pointer;
       font-weight:bold;
     ">
-      Abrir WhatsApp
-    </button>
+        Abrir WhatsApp
+      </button>
+
+    </div>
 
   </div>
+</body>
 
-</div>
-  </body>
 </html>
