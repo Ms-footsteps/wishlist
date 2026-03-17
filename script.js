@@ -232,21 +232,18 @@ botao.addEventListener("click", async ()=>{
   }
 
   const mensagem = `
-Oi Tayssa! 💜
+  Oi Tayssa!
+  Quero presentear a Tayná com:
+  ${livros.join("\n")}
 
-Quero presentear a Tayná com:
+  Total do presente: R$ ${soma.toFixed(2).replace(".",",")}
 
-${livros.join("\n")}
+  Meu nome é: ${nome}
 
-Total do presente: R$ ${soma.toFixed(2).replace(".",",")}
+  Mensagem para Tayná:
+  ${mensagemPessoa || "💜"}
 
-Meu nome é: ${nome}
-
-Mensagem para Tayná:
-${mensagemPessoa || "💜"}
-
-Vou fazer o PIX agora 😊
-`;
+  Quero fazer o PIX agora!`;
 
   const mensagemCodificada = encodeURIComponent(mensagem);
 
@@ -276,9 +273,6 @@ Vou fazer o PIX agora 😊
   },2000);
 
 });
-
-
-
 
 /* ================================
 AUTO ATUALIZAÇÃO
