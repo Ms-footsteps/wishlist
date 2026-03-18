@@ -102,6 +102,11 @@ body {
   transition: width 0.5s;
 }
 
+#copyBtn {
+  color: rgb(214, 212, 212);
+  padding: 2px;
+}
+
 /* GRID */
 
 .catalogo {
