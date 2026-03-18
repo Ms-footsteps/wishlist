@@ -2,6 +2,8 @@ const API =
   "https://script.google.com/macros/s/AKfycbyqpR4PVVr44Myn3vOaS6fRIwY9biPofgWukBBKg_JgV-DAOiCBcaBXW3ZBJKhPe3B7Wg/exec";
 const checkboxes = document.querySelectorAll('input[name="livros"]');
 const quantidade = document.getElementById("quantidade");
+const chavePix = document.getElementById("chavePix");
+const copyBtn = document.getElementById("copyBtn");
 const total = document.getElementById("total");
 const botao = document.getElementById("confirmar");
 const contadorTopo = document.getElementById("contadorLivros");
@@ -9,6 +11,14 @@ const TOTAL_LIVROS = 31;
 const livrosEspeciais = {
   22: 6,
   24: 3,
+};
+
+copyBtn.onclick = function () {
+  navigator.clipboard.writeText(chavePix.innerHTML);
+  copyBtn.style.color = "green";
+  setTimeout(function () {
+    copyBtn.style.color = "white";
+  }, 2000);
 };
 
 /* ================================
