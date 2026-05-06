@@ -1,5 +1,5 @@
 const API =
-  "https://script.google.com/macros/s/AKfycbyqpR4PVVr44Myn3vOaS6fRIwY9biPofgWukBBKg_JgV-DAOiCBcaBXW3ZBJKhPe3B7Wg/exec";
+  "https://urldaplanilhasheetsapi";
 const checkboxes = document.querySelectorAll('input[name="livros"]');
 const quantidade = document.getElementById("quantidade");
 const chavePix = document.getElementById("chavePix");
@@ -208,7 +208,7 @@ botao.addEventListener("click", async () => {
 
   const mensagemCodificada = encodeURIComponent(mensagem);
 
-  const telefone = "5579998862522";
+  const telefone = "00000000000";
 
   /* link direto para abrir o app */
   const whatsappApp = `whatsapp://send?phone=${telefone}&text=${mensagemCodificada}`;
